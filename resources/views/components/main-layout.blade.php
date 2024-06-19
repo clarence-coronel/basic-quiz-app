@@ -8,7 +8,7 @@
     <title>Quiz App</title>
 </head>
 <body class="w-full h-full bg-white">
-    <header class="w-full bg-white shadow-sm border-b">
+    <header class="sticky top-0 left-0 w-full bg-white shadow-sm border-b">
         <div class="w-full max-w-[1200px] mx-auto flex justify-between py-5 px-3">
             <nav class="flex items-center gap-5">
                 
@@ -18,7 +18,7 @@
                     Quiz App
                 </h1> --}}
                 {{-- View all quizzes for User --}}
-                <x-nav-link href="/">Home</x-nav-link>
+                <x-nav-link href="/quiz">My Quizzes</x-nav-link>
                 
                 {{-- Must also check if Teacher type user --}}
                 @auth

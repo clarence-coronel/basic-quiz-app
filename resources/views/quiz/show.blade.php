@@ -1,3 +1,3 @@
 <x-main-layout>
-    Home
+    {{$quiz}}
 </x-main-layout>
