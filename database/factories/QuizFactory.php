@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,7 @@ class QuizFactory extends Factory
     {
         return [
             'title' => fake()->sentence(),
+            'user_id' => User::factory(),
         ];
     }
 }
