@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
         
         Quiz::factory()->create([
             'title' => fake()->sentence(),
+            'desc' => fake()->sentence(),
             'user_id' => 1,
         ]);
 
