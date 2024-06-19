@@ -9,7 +9,7 @@ use App\Models\Quiz;
 class QuizController extends Controller
 {
     public function index(){
-        $quizzes = Quiz::where('user_id', Auth::id())->latest()->paginate(10);
+        $quizzes = Quiz::where('user_id', Auth::id())->with('questions')->latest()->paginate(10);
 
         return view('quiz.index', [ 'quizzes' => $quizzes]);
 
@@ -21,6 +21,8 @@ class QuizController extends Controller
     }
 
     public function show(Quiz $quiz){
+        $quiz->load('questions');
+
         return view('quiz.show', ['quiz' => $quiz]);
     }
 
@@ -35,7 +37,5 @@ class QuizController extends Controller
         $newQuiz = Quiz::create($attributes);
 
         return redirect('/quiz/' . $newQuiz->id);
-
-        dd(request());
     }
 }

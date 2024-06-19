@@ -18,7 +18,7 @@ class QuestionFactory extends Factory
     {
         return [
             'content' => fake()->sentence(),
-            'correct_choice_id' => 1
+            'choice_id' => 1
         ];
     }
 }

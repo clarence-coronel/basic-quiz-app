@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(App\Models\Quiz::class)->constrained()->cascadeOnDelete();
             $table->string('content');
-            $table->foreignIdFor(App\Models\Choice::class, 'correct_choice_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(App\Models\Choice::class)->nullable();
             $table->timestamps();
         });
     }

@@ -28,12 +28,12 @@ class SessionController extends Controller
         // regenerate tthe session token
         request()->session()->regenerate();
 
-        return redirect('/');
+        return redirect('/quiz');
     }
 
     public function destroy(){
         Auth::logout();
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

@@ -1,6 +1,6 @@
 <x-main-layout>
     <div class="w-full h-full flex justify-center items-center">
-        <form class="w-full flex flex-col gap-5 max-w-[700px] mx-5 my-10 rounded-md p-5 bg-white border shadow-md" action="/register" method="POST">
+        <form class="w-full flex flex-col gap-5 max-w-[700px] mx-5 mt-10 rounded-md p-5 bg-white border shadow-md" action="/register" method="POST">
             @csrf
 
             <div>
