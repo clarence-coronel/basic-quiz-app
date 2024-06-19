@@ -2,13 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Quiz>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Question>
  */
-class QuizFactory extends Factory
+class QuestionFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +17,8 @@ class QuizFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->sentence(),
-            'about' => fake()->sentence(),
-            'user_id' => User::factory(),
+            'content' => fake()->sentence(),
+            'correct_choice_id' => 1
         ];
     }
 }

@@ -3,12 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Quiz;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\QA>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Choice>
  */
-class QAFactory extends Factory
+class ChoiceFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +17,8 @@ class QAFactory extends Factory
     public function definition(): array
     {
         return [
-            'quiz_id' => Quiz::factory(),
-            'question' => fake()->sentence(),
-            'answer' => fake()->sentence()
+            "question_id" => 1,
+            "content" => fake()->sentence(),
         ];
     }
 }

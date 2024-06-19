@@ -4,8 +4,8 @@
             @csrf
 
             <div>
-                <h1 class="text-lg font-bold text-neutral-600">Register a new account</h1>
-                <span class="text-sm">We just need a handful of details from you.</span>
+                <h1 class="text-lg font-bold text-neutral-600">Register a New Account</h1>
+                <span class="text-sm">We'll just need a handful of details from you.</span>
             </div>
 
             {{-- Full Name --}}
@@ -71,7 +71,7 @@
                 @enderror
             </div>
 
-            <button class="max-md:max-w-none hover:bg-green-600 w-full max-w-[200px] mx-auto px-3 py-2 bg-green-500 text-white rounded-md duration-200">Register</button>
+            <button class="max-md:max-w-none hover:bg-green-600 w-full max-w-[300px] mx-auto px-3 py-2 bg-green-500 text-white rounded-md duration-200">Register</button>
         </form>
     </div>
 </x-main-layout>

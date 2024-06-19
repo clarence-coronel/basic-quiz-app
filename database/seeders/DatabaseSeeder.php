@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Quiz;
-use App\Models\QA;
+use App\Models\Question;
+use App\Models\Choice;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -24,16 +25,21 @@ class DatabaseSeeder extends Seeder
             'password' => 'testing'
         ]);
         
-        Quiz::factory()->create([
+        Quiz::factory(3)->create([
             'title' => fake()->sentence(),
-            'desc' => fake()->sentence(),
+            'about' => fake()->sentence(),
             'user_id' => 1,
         ]);
 
-        QA::factory(10)->create([
-            'quiz_id' => 1,
-            'question' => fake()->sentence(),
-            'answer' => fake()->sentence()
-        ]);
+        // Question::factory(1)->create([
+        //     'quiz_id' => 1,
+        //     'content' => fake()->sentence(),
+        //     'correct_choice_id' => null
+        // ]);
+
+        // Choice::factory()->create([
+        //     'content' => fake()->sentence(),
+        //     'question_id' => 1,
+        // ]);
     }
 }

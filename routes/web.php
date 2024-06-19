@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
+use GuzzleHttp\Middleware;
 
 Route::get('/', function () {
     return view('quiz.show');
@@ -10,7 +11,7 @@ Route::get('/', function () {
 
 Route::get('/quiz/create', function () {
     return view('quiz.create');
-});
+})->middleware('auth');
 
 Route::get('/login', [SessionController::class, 'create'])->name('login')->middleware('guest');
 Route::post('/login', [SessionController::class, 'store'])->middleware('guest');

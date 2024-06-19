@@ -24,7 +24,7 @@
                 @enderror
             </div>
 
-            <button class="max-md:max-w-none hover:bg-green-600 w-full max-w-[200px] mx-auto px-3 py-2 bg-green-500 text-white rounded-md duration-200">
+            <button class="hover:bg-green-600 w-full mx-auto px-3 py-2 bg-green-500 text-white rounded-md duration-200">
                 Log In
             </button>
         </form>
