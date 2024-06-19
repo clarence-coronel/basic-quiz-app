@@ -18,10 +18,11 @@
                     Quiz App
                 </h1> --}}
                 {{-- View all quizzes for User --}}
-                <x-nav-link href="/quiz">My Quizzes</x-nav-link>
+                
                 
                 {{-- Must also check if Teacher type user --}}
                 @auth
+                <x-nav-link href="/quiz">My Quizzes</x-nav-link>
                 <x-nav-link href="/quiz/create">Create Quiz</x-nav-link>
                 @endauth
             </nav>
