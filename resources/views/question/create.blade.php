@@ -8,7 +8,7 @@
             </div>
 
             <div class="w-full flex items-start flex-col gap-1">
-                <label class="w-full" for="content">Question</label>
+                <label class="w-full font-semibold" for="content">Question</label>
                 <input class="focus:outline-blue-400 border-2 p-1 w-full" name="content" id="content" type="text" value="{{old('content')}}" required>
                 @error('content')
                     <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
@@ -18,7 +18,7 @@
 
             <div class="flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <h2>Choices</h2>
+                    <h2 class="font-semibold">Choices</h2>
                 </div>
                 <div class="flex gap-3">
                     <div class="w-5/6 flex items-start flex-col gap-1">
