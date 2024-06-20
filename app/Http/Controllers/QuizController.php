@@ -38,4 +38,25 @@ class QuizController extends Controller
 
         return redirect('/quiz/' . $newQuiz->id);
     }
+
+    public function edit(Quiz $quiz){
+        return view('quiz.edit', ['quiz' => $quiz]);
+    }
+    
+    public function update(Quiz $quiz){
+        $attributes = request()->validate([
+            'title' => ['required', 'max:20'],
+            'about' => ['required', 'max:100']
+        ]);
+
+        $quiz->update($attributes);
+
+        return redirect('/quiz/' . $quiz->id);
+    }
+
+    public function destroy(Quiz $quiz){
+        $quiz->delete();
+
+        return redirect('/quiz');
+    }
 }

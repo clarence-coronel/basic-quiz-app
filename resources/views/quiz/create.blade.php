@@ -2,6 +2,7 @@
     <div class="w-full h-full flex justify-center items-center">
         <form class="w-full flex flex-col gap-3 max-w-[700px] mx-5 mt-10 rounded-md p-5 bg-white border shadow-md" action="/quiz/create" method="POST">
             @csrf
+            @method("PUT")
 
             <div>
                 <h1 class="text-lg font-bold text-neutral-600">Create Quiz</h1>
@@ -17,7 +18,7 @@
 
             <div class="w-full flex items-start flex-col gap-1">
                 <label class="w-full" for="about">About</label>
-                <textarea name="about" id="about" class="resize-y focus:outline-blue-400 border-2 p-1 w-full" value="{{old('about')}}" required></textarea>
+                <textarea name="about" id="about" class="resize-y focus:outline-blue-400 border-2 p-1 w-full" required> {{old('about')}} </textarea>
                 @error('about')
                     <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
                 @enderror

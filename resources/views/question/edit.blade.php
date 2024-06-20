@@ -12,6 +12,7 @@
     <div class="w-full h-full flex justify-center items-center">
         <form class="w-full flex flex-col gap-5 max-w-[700px] mx-5 mt-10 rounded-md p-5 bg-white border shadow-md" action="/question/{{$question->id}}/edit" method="POST">
             @csrf
+            @method('PUT')
 
             <div>
                 <h1 class="text-lg font-bold text-neutral-600">Edit Question</h1>
